@@ -1,0 +1,61 @@
+# Node.js
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Laravel
+vendor/
+.env
+.env.*
+/api/app/storage/*.key
+api/app/storage/app/*.key
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+/bootstrap/cache/*
+
+# Lumen
+/public/storage
+/storage/*.key
+/storage/app/*.key
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# OS-specific files
+*.swp
+*.swo
+*.swn
+*.sws
+
+# Build outputs
+/dist/
+*.log
+
+# Docker
+docker-compose.override.yml
+Dockerfile
+.docker/
+
+# Coverage
+/coverage/
+
+# Composer
+composer.phar

@@ -27,7 +27,7 @@
     },
     data() {
       return {
-        currentView: 'form' 
+        currentView: 'form'
       };
     }
   };

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "slim/slim": "4.10",
+        "laravel/lumen": "^10.0"
+    }
+}
