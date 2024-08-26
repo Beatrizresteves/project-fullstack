@@ -1,14 +1,24 @@
-import axios from 'axios';
+// frontend/src/services/api.js
 
-const API_URL = 'http://localhost:8000'; // URL do seu backend Lumen
+const API_URL = 'http://localhost/api'; // Atualize conforme necessário
 
-const api = axios.create({
-  baseURL: API_URL,
-  timeout: 1000,
-  headers: { 'Content-Type': 'application/json' }
-});
+export async function addWeather(data) {
+  const response = await fetch(`${API_URL}/add_weather.php`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams(data).toString(),
+  });
+  return response.text();
+}
 
-// Função para obter o clima
-export const getWeather = (city) => {
-  return api.get(`/weather?city=${city}`);
-};
+export async function getWeather(city) {
+  const response = await fetch(`${API_URL}/get_weather.php?city=${encodeURIComponent(city)}`);
+  return response.json();
+}
+
+export async function getHistory() {
+  const response = await fetch(`${API_URL}/get_history.php`);
+  return response.json();
+}

@@ -26,7 +26,7 @@
     },
     methods: {
       addWeather() {
-        fetch('http://localhost/backend/add_weather.php', {
+        fetch('http://localhost:8000/add_weather.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'

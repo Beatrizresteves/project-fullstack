@@ -34,7 +34,7 @@
       };
     },
     mounted() {
-      fetch('http://localhost/backend/get_history.php')
+      fetch('http://localhost:8000/get_history.php')
         .then(response => response.json())
         .then(data => {
           this.history = data;

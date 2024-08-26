@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     getWeather() {
-      fetch(`http://localhost/backend/get_weather.php?city=${this.city}`)
+      fetch(`http://localhost:8000/get_weather.php?city=${this.city}`)
         .then(response => response.json())
         .then(data => {
           this.weather = data;
